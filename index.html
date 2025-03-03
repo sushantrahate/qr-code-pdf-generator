@@ -19,8 +19,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
-  <div class="bg-white shadow-lg rounded-xl p-8 w-full max-w-lg flex flex-col items-center">
+<body
+  class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#C7D2FE] to-[#ffffff] bg-center bg-cover min-h-screen h-screen text-slate-900 p-4">
+  <div class="container mx-auto">
+    <div class="flex flex-col justify-center items-center">
+      <h1
+        class="text-3xl font-bold transition-all my-3 duration-500 bg-gradient-to-r from-indigo-600 to-purple-500 bg-clip-text text-transparent inline-block">
+        QR Code Generator with PDF Download</h1>
+    </div>
+  </div>
+  <div class="bg-white shadow-lg rounded-xl p-8 w-full max-w-lg flex flex-col mx-auto items-center">
     <input id="title" type="text" placeholder="Enter Title Here..."
       class="w-full p-3 border rounded mb-4 text-center text-3xl font-extrabold" />
     <label for="titleColor" class="text-lg mb-2">Select Title Color:</label>
@@ -34,12 +42,14 @@
       <option value="letter">Letter</option>
       <option value="legal">Legal</option>
     </select>
-    <button onclick="generateQR()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded mb-6">
+    <button onclick="generateQR()"
+      class="my-5 rounded-full border border-gray-300 max-lg:mx-auto shadow-sm py-2 px-6 flex items-center transition-all duration-500 bg-slate-50 hover:bg-slate-600 text-slate-600 hover:text-white font-semibold text-lg  whitespace-nowrap">
       Generate QR Code
     </button>
     <div id="qrcode" class="border p-4"></div>
-    <button onclick="generatePDF()" class="mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded">
-      Generate PDF
+    <button onclick="generatePDF()"
+      class="my-5 rounded-full border border-gray-300 max-lg:mx-auto shadow-sm py-2 px-6 flex items-center transition-all duration-500 bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white font-semibold text-lg  whitespace-nowrap">
+      Download PDF
     </button>
   </div>
 
